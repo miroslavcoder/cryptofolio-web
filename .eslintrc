@@ -1,0 +1,33 @@
+{
+  "extends": "@lanp/eslint-config",
+  "settings": {
+    "import/resolver": {
+      "alias": [
+        ["pageTypes", "./pageTypes"],
+        ["styles", "./styles"],
+        ["pages", "./pages"],
+        ["test", "./test"],
+        ["config", "./config"],
+        ["server", "./server"],
+        ["ducks", "./ducks"],
+        ["redux", "./redux"],
+        ["utils", "./utils"],
+        ["store", "./redux/store"],
+        ["hoc", "./views/hoc"],
+        ["components", "./views/components"],
+        ["sections", "./views/sections"],
+        ["icons", "./views/icons"]
+      ]
+    }
+  },
+  "globals": {
+    // For sagas, to make "saga(): Generator<any, any, any>" work
+    "Generator": true,
+    // For images uploading using sagas
+    "FormData": true
+  },
+  "rules": {
+    "no-unused-expressions": 0,
+    "react/prop-types": 0
+  }
+}
